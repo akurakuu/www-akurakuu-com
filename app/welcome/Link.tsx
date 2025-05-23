@@ -1,19 +1,23 @@
 type Props = {
     url: string;
-    text: string;
-    icon: React.ReactNode;
-}
+    serviceName: string;
+    description?: string;
+    icon?: React.ReactNode;
+};
 
-export function Link({ url, text, icon }: Props) {
+export function Link({ url, serviceName, description, icon }: Props) {
     return (
         <a
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center gap-2 rounded-md p-2 text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700"
+            className="flex gap-4 justify-items-center items-center p-6 border border-gray-800 rounded-xl"
         >
             {icon}
-            <span className="text-sm font-medium">{text}</span>
+            <span className="text-sm font-medium">{serviceName}</span>
+            <span className="text-xs text-gray-500 dark:text-gray-400">
+                {description}
+            </span>
         </a>
     );
 }
