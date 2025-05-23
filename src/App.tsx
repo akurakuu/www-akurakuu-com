@@ -1,35 +1,50 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import { Link } from "./component/Link";
+import icon from "/iconあくらくうcircle.png";
 
 function App() {
-  const [count, setCount] = useState(0)
+    return (
+        <main className="flex flex-col items-center justify-center gap-16 pt-16 pb-4">
+            <div className="flex flex-col justify-center items-center">
+                <img src={icon} alt="Logo" className="w-24 h-24 rounded-full" />
+                <h1 className="text-center mt-2 font-bold text-xl">
+                    あくらくう
+                </h1>
+                <div className="text-xs">
+                  人々はみな、之をいとおかしだと言ふ。
+                </div>
+            </div>
+            <div className="flex flex-col gap-4">
+                <Link
+                    url="https://twitter.com/akurakuu"
+                    serviceName="Twitter"
+                    description="日常生活をつぶやきまくるやかましいやつ"
+                />
+                <Link
+                    url="https://github.com/akurakuu"
+                    serviceName="Github"
+                    description="パスタコード専門店"
+                />
+                <Link
+                    url="https://unsplash.com/ja/@akurakuu"
+                    serviceName="Unsplash"
+                    description="撮った写真をばらまくなどする"
+                />
+            </div>
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+            {/* 
+        Twitter
+        Github
+        Unsplash
+        Youtube
+        Instagram
+        Discord
+        Twitch
+        BlueSky
+        
+      */}
+        </main>
+    );
 }
 
-export default App
+export default App;
