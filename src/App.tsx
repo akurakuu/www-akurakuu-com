@@ -11,7 +11,7 @@ function App() {
                     あくらくう
                 </h1>
                 <div className="text-xs">
-                  人々はみな、之をいとおかしだと言ふ。
+                  人々はみな、之を変態と言ふ。
                 </div>
             </div>
             <div className="flex flex-col gap-4">
